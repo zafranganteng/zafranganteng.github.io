@@ -7,93 +7,244 @@
   <title>Portofolio Saya</title>
 
 <style>
-  body {
-    background: #f5f8ff;
-    color: #1e293b;
-    font-family: Arial, sans-serif;
-  }
-
-  header {
-    background: #2563eb;
-    color: white;
-  }
+  /* CSS lama kamu berada di sini */
 </style>
 
-</head>
 
-<body>
+/* 1. Pengaturan dasar */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-  <nav>
-    <div class="logo">Portofolio.</div>
-    <div>
-      <a href="#home">Home</a>
-      <a href="#about">Tentang</a>
-      <a href="#skills">Skill</a>
-      <a href="#contact">Kontak</a>
-    </div>
-  </nav>
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
+}
 
-  <section class="hero" id="home">
-    <div class="avatar">Z</div>
-    <h1>Halo, Saya <span>Zafran!</span></h1>
-    <p>Pelajar | Calon Web Developer | Pecinta Teknologi</p>
-    <a class="button" href="#about">Kenali Saya</a>
-  </section>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f8fafc;
+  color: #1e293b;
+  line-height: 1.7;
+}
 
-  <section class="container" id="about">
-    <h2 class="section-title">Tentang <span>Saya</span></h2>
-    <div class="card">
-      <h3>Perkenalkan!</h3>
-      <p>
-        Halo, saya Zafran. Saya sedang belajar teknologi,
-        membuat website, dan mengembangkan aplikasi.
-        Website ini adalah portofolio pribadi pertama saya.
-      </p>
-    </div>
-  </section>
+a {
+  text-decoration: none;
+}
 
-  <section class="container" id="skills">
-    <h2 class="section-title">Skill & <span>Minat</span></h2>
-    <div class="grid">
-      <div class="card">
-        <h3>💻 Programming</h3>
-        <p>Belajar membuat website dan aplikasi.</p>
-        <span class="skill">HTML</span>
-        <span class="skill">CSS</span>
-      </div>
+/* 2. Menu navigasi */
+nav {
+  background: #ffffff;
+  padding: 18px 8%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 14px;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  box-shadow: 0 3px 15px #0f172a0d;
+}
 
-      <div class="card">
-        <h3>🎨 Design</h3>
-        <p>Belajar menyusun tampilan aplikasi.</p>
-        <span class="skill">UI Design</span>
-        <span class="skill">FlutterFlow</span>
-      </div>
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #2563eb;
+}
 
-      <div class="card">
-        <h3>🚀 Pengembangan</h3>
-        <p>Terus mencoba hal baru dan meningkatkan kemampuan.</p>
-        <span class="skill">Belajar</span>
-        <span class="skill">Kreativitas</span>
-      </div>
-    </div>
-  </section>
+nav a {
+  color: #475569;
+  margin-left: 20px;
+  font-size: 14px;
+  font-weight: 600;
+  transition: color 0.2s;
+}
 
-  <section class="container" id="contact">
-    <div class="contact">
-      <h2 class="section-title">Hubungi <span>Saya</span></h2>
-      <p>Terima kasih sudah mengunjungi website saya!</p>
-      <p>Silakan hubungi saya melalui email.</p>
-      <br>
-      <a class="button"
-         href="yanzpole999@gmail.com">
-        Kirim Email
-      </a>
-    </div>
-  </section>
+nav a:hover {
+  color: #2563eb;
+}
 
-  <footer>
-    <p>© 2026 Zafran | Dibuat dengan HTML & CSS</p>
-  </footer>
+/* 3. Bagian pembuka */
+.hero {
+  padding: 90px 20px;
+  text-align: center;
+  background: linear-gradient(135deg, #dbeafe, #eff6ff, #ffffff);
+}
 
-</body>
-</html>
+.avatar {
+  width: 135px;
+  height: 135px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #2563eb, #60a5fa);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 52px;
+  font-weight: bold;
+  margin: 0 auto 24px;
+  border: 5px solid white;
+  box-shadow: 0 8px 25px #2563eb30;
+}
+
+.hero h1 {
+  font-size: clamp(30px, 5vw, 46px);
+  line-height: 1.25;
+  margin-bottom: 15px;
+}
+
+.hero h1 span {
+  color: #2563eb;
+}
+
+.hero p {
+  color: #64748b;
+  margin-bottom: 28px;
+}
+
+/* 4. Tombol */
+.button {
+  display: inline-block;
+  background: #2563eb;
+  color: #ffffff;
+  padding: 13px 26px;
+  border-radius: 10px;
+  font-weight: bold;
+  transition: 0.25s;
+  box-shadow: 0 5px 15px #2563eb25;
+}
+
+.button:hover {
+  background: #1d4ed8;
+  transform: translateY(-3px);
+}
+
+/* 5. Bagian konten */
+.container {
+  max-width: 1050px;
+  margin: 0 auto;
+  padding: 65px 24px;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 30px;
+  margin-bottom: 32px;
+}
+
+.section-title span {
+  color: #2563eb;
+}
+
+/* 6. Kartu */
+.card {
+  background: #ffffff;
+  padding: 28px;
+  border: 1px solid #e2e8f0;
+  border-radius: 18px;
+  box-shadow: 0 8px 25px #0f172a08;
+  transition: transform 0.25s, box-shadow 0.25s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px #0f172a12;
+}
+
+.card h3 {
+  color: #2563eb;
+  margin-bottom: 12px;
+}
+
+.card p {
+  color: #64748b;
+}
+
+/* 7. Susunan kartu skill */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.skill {
+  display: inline-block;
+  background: #eff6ff;
+  color: #1d4ed8;
+  padding: 6px 12px;
+  margin: 10px 5px 0 0;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+/* 8. Bagian kontak */
+.contact {
+  text-align: center;
+  background: linear-gradient(135deg, #dbeafe, #eff6ff);
+  border: 1px solid #bfdbfe;
+  padding: 45px 24px;
+  border-radius: 20px;
+}
+
+.contact p {
+  color: #475569;
+}
+
+/* 9. Footer */
+footer {
+  background: #0f172a;
+  color: #cbd5e1;
+  text-align: center;
+  padding: 28px 15px;
+  font-size: 14px;
+}
+
+/* 10. Tampilan HP dan tablet */
+@media (max-width: 768px) {
+  nav {
+    justify-content: center;
+    padding: 16px;
+  }
+
+  nav > div:last-child {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  nav a {
+    margin: 0;
+  }
+
+  .hero {
+    padding: 65px 18px;
+  }
+
+  .grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+  }
+
+  .container {
+    padding: 45px 18px;
+  }
+}
+
+@media (max-width: 520px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .section-title {
+    font-size: 26px;
+  }
+
+  .card {
+    padding: 22px;
+  }
+}
