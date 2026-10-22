@@ -4,11 +4,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Website portofolio pribadi Zafran">
-  <title>Zafran | Personal Portfolio</title>
+  <meta name="description" content="Tentang saya - Portofolio Zafran">
+  <title>Tentang Saya | Zafran</title>
 
   <style>
-    /* ===== PENGATURAN DASAR ===== */
+    /* ===== DASAR ===== */
     * {
       margin: 0;
       padding: 0;
@@ -17,13 +17,13 @@
 
     html {
       scroll-behavior: smooth;
-      scroll-padding-top: 85px;
+      scroll-padding-top: 90px;
     }
 
     body {
       font-family: Arial, Helvetica, sans-serif;
       background: #080d1b;
-      color: #f1f5f9;
+      color: #f8fafc;
       line-height: 1.7;
     }
 
@@ -36,7 +36,7 @@
       margin: auto;
     }
 
-    .accent {
+    .blue {
       color: #60a5fa;
     }
 
@@ -45,13 +45,13 @@
       position: sticky;
       top: 0;
       z-index: 100;
-      background: rgba(8, 13, 27, 0.92);
-      backdrop-filter: blur(14px);
-      border-bottom: 1px solid #ffffff12;
+      background: rgba(8, 13, 27, 0.96);
+      border-bottom: 1px solid #ffffff15;
+      backdrop-filter: blur(12px);
     }
 
     .nav-inner {
-      min-height: 76px;
+      min-height: 75px;
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -70,8 +70,8 @@
 
     .nav-links {
       display: flex;
-      gap: 26px;
       flex-wrap: wrap;
+      gap: 24px;
     }
 
     .nav-links a {
@@ -80,253 +80,289 @@
       transition: color 0.2s;
     }
 
-    .nav-links a:hover {
+    .nav-links a:hover,
+    .nav-links a.active {
       color: #60a5fa;
     }
 
-    /* ===== HALAMAN PEMBUKA ===== */
+    /* ===== HEADER TENTANG SAYA ===== */
     .hero {
-      min-height: 590px;
-      display: flex;
-      align-items: center;
-      position: relative;
-      overflow: hidden;
+      padding: 75px 0 55px;
+      text-align: center;
       background:
-        radial-gradient(ellipse at 80% 20%, #1d4ed833, transparent 40%),
-        radial-gradient(ellipse at 10% 80%, #7c3aed20, transparent 40%);
-    }
-
-    .hero-content {
-      padding: 90px 0;
-      max-width: 750px;
+        radial-gradient(ellipse at 50% 0%, #2563eb30, transparent 65%);
     }
 
     .badge {
       display: inline-block;
-      padding: 7px 15px;
-      border: 1px solid #60a5fa55;
-      border-radius: 30px;
+      padding: 7px 16px;
+      border: 1px solid #60a5fa45;
+      background: #2563eb20;
       color: #93c5fd;
-      background: #2563eb18;
-      font-size: 13px;
-      margin-bottom: 25px;
+      border-radius: 30px;
+      font-size: 12px;
+      letter-spacing: 2px;
+      margin-bottom: 20px;
     }
 
     .hero h1 {
-      font-size: clamp(42px, 7vw, 72px);
-      line-height: 1.12;
-      letter-spacing: -2px;
-      margin-bottom: 22px;
+      font-size: clamp(36px, 6vw, 55px);
+      line-height: 1.2;
+      margin-bottom: 14px;
     }
 
     .hero p {
-      max-width: 590px;
-      color: #a8b5ca;
-      font-size: 17px;
-      margin-bottom: 32px;
+      color: #94a3b8;
+      max-width: 650px;
+      margin: auto;
     }
 
-    .buttons {
+    /* ===== PROFIL ===== */
+    .profile-section {
+      padding: 35px 0 75px;
+    }
+
+    .profile-card {
+      display: grid;
+      grid-template-columns: 280px 1fr;
+      gap: 40px;
+      align-items: center;
+      padding: 38px;
+      border-radius: 24px;
+      border: 1px solid #ffffff15;
+      background: linear-gradient(145deg, #111b31, #0c1324);
+      box-shadow: 0 20px 60px #00000020;
+    }
+
+    .profile-photo {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      border-radius: 20px;
+      background: linear-gradient(135deg, #1d4ed8, #7c3aed);
       display: flex;
-      gap: 14px;
-      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      font-size: 90px;
+      border: 1px solid #60a5fa45;
+      overflow: hidden;
     }
 
-    .btn {
-      display: inline-block;
-      padding: 13px 23px;
-      border-radius: 10px;
-      font-weight: bold;
-      font-size: 14px;
-      transition: 0.25s;
+    .profile-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
     }
 
-    .btn-primary {
-      background: #3b82f6;
-      color: white;
-      box-shadow: 0 8px 25px #3b82f633;
-    }
-
-    .btn-primary:hover {
-      background: #2563eb;
-      transform: translateY(-3px);
-    }
-
-    .btn-outline {
-      border: 1px solid #ffffff30;
-      color: white;
-    }
-
-    .btn-outline:hover {
-      background: #ffffff12;
-      transform: translateY(-3px);
-    }
-
-    /* ===== BAGIAN KONTEN ===== */
-    section.content-section {
-      padding: 85px 0;
-    }
-
-    .section-heading {
-      text-align: center;
-      margin-bottom: 42px;
-    }
-
-    .section-heading .eyebrow {
+    .profile-info .eyebrow {
       color: #60a5fa;
       font-size: 12px;
       font-weight: bold;
       letter-spacing: 3px;
-      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+
+    .profile-info h2 {
+      font-size: clamp(28px, 4vw, 38px);
+      margin-bottom: 15px;
+    }
+
+    .profile-info p {
+      color: #a8b5ca;
+      margin-bottom: 15px;
+    }
+
+    .profile-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 9px;
+      margin-top: 22px;
+    }
+
+    .tag {
+      background: #172747;
+      color: #93c5fd;
+      border: 1px solid #60a5fa20;
+      padding: 6px 12px;
+      border-radius: 8px;
+      font-size: 12px;
+    }
+
+    /* ===== BAGIAN UMUM ===== */
+    .section {
+      padding: 65px 0;
+    }
+
+    .section-heading {
+      text-align: center;
+      margin-bottom: 35px;
+    }
+
+    .eyebrow {
+      color: #60a5fa;
+      font-size: 12px;
+      font-weight: bold;
+      letter-spacing: 3px;
     }
 
     .section-heading h2 {
-      font-size: clamp(29px, 4vw, 40px);
-      margin-top: 8px;
+      font-size: clamp(28px, 4vw, 38px);
+      margin: 8px 0;
     }
 
     .section-heading p {
       color: #94a3b8;
-      margin-top: 10px;
     }
 
-    /* ===== TENTANG SAYA ===== */
-    .about-card {
-      background: linear-gradient(135deg, #111b31, #0d1425);
+    /* ===== BIODATA ===== */
+    .bio-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .bio-item {
+      padding: 23px;
+      background: #10192c;
       border: 1px solid #ffffff12;
-      border-radius: 20px;
-      padding: 35px;
-      color: #b8c4d8;
+      border-radius: 15px;
+      transition: 0.25s;
     }
 
-    .about-card h3 {
-      color: white;
-      font-size: 23px;
-      margin-bottom: 12px;
+    .bio-item:hover {
+      transform: translateY(-4px);
+      border-color: #60a5fa70;
     }
 
-    /* ===== KARTU SKILL ===== */
-    .grid {
+    .bio-item .label {
+      color: #94a3b8;
+      font-size: 13px;
+      margin-bottom: 5px;
+    }
+
+    .bio-item .value {
+      color: #f8fafc;
+      font-weight: bold;
+      overflow-wrap: anywhere;
+    }
+
+    /* ===== PENDIDIKAN ===== */
+    .education-card {
+      position: relative;
+      padding: 30px;
+      background: linear-gradient(145deg, #111b31, #0c1324);
+      border: 1px solid #ffffff15;
+      border-radius: 18px;
+    }
+
+    .education-card h3 {
+      font-size: 20px;
+      margin-bottom: 8px;
+    }
+
+    .education-card p {
+      color: #a8b5ca;
+    }
+
+    .education-date {
+      display: inline-block;
+      color: #93c5fd;
+      background: #2563eb20;
+      padding: 5px 12px;
+      border-radius: 7px;
+      margin-bottom: 15px;
+      font-size: 13px;
+    }
+
+    /* ===== MINAT ===== */
+    .interest-grid {
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 22px;
+      gap: 20px;
     }
 
-    .card {
-      background: linear-gradient(145deg, #111b31, #0c1324);
+    .interest-card {
+      padding: 25px;
       border: 1px solid #ffffff12;
-      border-radius: 18px;
-      padding: 28px;
-      transition: transform 0.25s, border-color 0.25s;
+      border-radius: 17px;
+      background: #10192c;
+      transition: 0.25s;
     }
 
-    .card:hover {
-      transform: translateY(-7px);
-      border-color: #60a5fa88;
+    .interest-card:hover {
+      transform: translateY(-5px);
+      border-color: #60a5fa70;
     }
 
-    .icon-box {
-      width: 52px;
-      height: 52px;
+    .interest-icon {
+      width: 50px;
+      height: 50px;
       display: grid;
       place-items: center;
+      border-radius: 13px;
       background: #2563eb20;
-      border: 1px solid #60a5fa35;
-      border-radius: 14px;
-      font-size: 25px;
-      margin-bottom: 22px;
+      font-size: 24px;
+      margin-bottom: 17px;
     }
 
-    .card h3 {
-      color: white;
-      font-size: 19px;
-      margin-bottom: 10px;
+    .interest-card h3 {
+      margin-bottom: 8px;
     }
 
-    .card p {
+    .interest-card p {
       color: #94a3b8;
       font-size: 14px;
     }
 
-    .tag-list {
-      display: flex;
-      gap: 8px;
-      flex-wrap: wrap;
-      margin-top: 18px;
-    }
-
-    .tag {
-      color: #93c5fd;
-      background: #2563eb20;
-      padding: 5px 10px;
-      border-radius: 6px;
-      font-size: 12px;
-    }
-
-    /* ===== KONTAK ===== */
-    .contact-box {
-      text-align: center;
-      padding: 50px 25px;
-      border-radius: 22px;
-      border: 1px solid #60a5fa35;
-      background:
-        radial-gradient(ellipse at top, #2563eb28, transparent 65%),
-        #10192c;
-    }
-
-    .contact-box h2 {
-      font-size: clamp(28px, 4vw, 38px);
-      margin-bottom: 14px;
-    }
-
-    .contact-box p {
-      color: #a8b5ca;
-      margin-bottom: 25px;
-    }
-
     /* ===== FOOTER ===== */
     footer {
-      border-top: 1px solid #ffffff12;
+      margin-top: 45px;
       padding: 28px 0;
-      color: #8492a8;
       text-align: center;
+      border-top: 1px solid #ffffff12;
+      color: #8492a8;
       font-size: 13px;
     }
 
-    /* ===== RESPONSIVE HP ===== */
-    @media (max-width: 700px) {
+    /* ===== RESPONSIF ===== */
+    @media (max-width: 760px) {
       .nav-inner {
-        padding: 15px 0;
         flex-direction: column;
+        padding: 15px 0;
       }
 
       .nav-links {
         justify-content: center;
-        gap: 16px;
+        gap: 15px;
       }
 
-      .hero {
-        min-height: 480px;
+      .profile-card {
+        grid-template-columns: 1fr;
+        padding: 25px;
+        gap: 25px;
       }
 
-      .hero-content {
-        padding: 65px 0;
+      .profile-photo {
+        max-width: 260px;
+        margin: auto;
       }
 
-      .hero h1 {
-        letter-spacing: -1px;
+      .interest-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
       }
+    }
 
-      .grid {
+    @media (max-width: 520px) {
+      .bio-grid,
+      .interest-grid {
         grid-template-columns: 1fr;
       }
 
-      section.content-section {
-        padding: 60px 0;
+      .hero {
+        padding-top: 55px;
       }
 
-      .about-card {
-        padding: 25px;
+      .section {
+        padding: 45px 0;
       }
     }
   </style>
@@ -341,155 +377,144 @@
 
       <div class="nav-links">
         <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#hobbies">Hobi</a>
-        <a href="#contact">Kontak</a>
+        <a href="#about" class="active">Tentang Saya</a>
+        <a href="#biodata">Biodata</a>
+        <a href="#education">Pendidikan</a>
+        <a href="#interest">Minat</a>
       </div>
     </div>
   </nav>
 
-  <!-- PEMBUKA -->
+  <!-- JUDUL -->
   <header class="hero" id="home">
     <div class="container">
-      <div class="hero-content">
-        <div class="badge">✦ WEBSITE PORTOFOLIO PRIBADI</div>
-
-        <h1>
-          Halo, Saya<br>
-          <span class="accent">Zafran</span>
-        </h1>
-
-        <p>
-          Selamat datang di website pribadi saya.
-          Saya sedang belajar teknologi, desain,
-          dan pengembangan website untuk masa depan.
-        </p>
-
-        <div class="buttons">
-          <a href="#about" class="btn btn-primary">
-            Kenali Saya →
-          </a>
-
-          <a href="#contact" class="btn btn-outline">
-            Hubungi Saya
-          </a>
-        </div>
-      </div>
+      <div class="badge">✦ PERSONAL PORTFOLIO</div>
+      <h1>Tentang <span class="blue">Saya</span></h1>
+      <p>
+        Kenali saya lebih dekat, mulai dari perkenalan,
+        biodata, pendidikan, hingga minat saya.
+      </p>
     </div>
   </header>
 
-  <!-- TENTANG SAYA -->
-  <section class="content-section" id="about">
+  <!-- PROFIL UTAMA -->
+  <section class="profile-section" id="about">
+    <div class="container">
+      <div class="profile-card">
+
+        <div class="profile-photo">
+          👨🏻‍💻
+        </div>
+
+        <div class="profile-info">
+          <div class="eyebrow">HALO, SENANG BERTEMU DENGANMU</div>
+          <h2>Saya <span class="blue">Zafran</span></h2>
+
+          <p>
+            Saya adalah seseorang yang tertarik pada teknologi,
+            desain, dan pengembangan aplikasi. Saya senang
+            mempelajari hal baru dan terus mengembangkan
+            kemampuan melalui berbagai proyek.
+          </p>
+
+          <p>
+            Website ini merupakan tempat untuk memperkenalkan
+            diri, berbagi minat, serta menampilkan perjalanan
+            belajar dan kemampuan saya.
+          </p>
+
+          <div class="profile-tags">
+            <span class="tag">💻 Teknologi</span>
+            <span class="tag">🎨 Desain</span>
+            <span class="tag">📱 Aplikasi</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- BIODATA -->
+  <section class="section" id="biodata">
     <div class="container">
       <div class="section-heading">
-        <div class="eyebrow">PERKENALAN</div>
-        <h2>Tentang <span class="accent">Saya</span></h2>
-        <p>Sedikit cerita tentang diri saya.</p>
+        <div class="eyebrow">INFORMASI PRIBADI</div>
+        <h2>Biodata <span class="blue">Saya</span></h2>
+        <p>Informasi singkat mengenai diri saya.</p>
       </div>
 
-      <div class="about-card">
-        <h3>Senang Bertemu Denganmu! 👋</h3>
+      <div class="bio-grid">
+        <div class="bio-item">
+          <div class="label">Nama</div>
+          <div class="value">Zafran</div>
+        </div>
+
+        <div class="bio-item">
+          <div class="label">Status</div>
+          <div class="value">Pelajar</div>
+        </div>
+
+        <div class="bio-item">
+          <div class="label">Bidang Minat</div>
+          <div class="value">Teknologi dan Desain</div>
+        </div>
+
+        <div class="bio-item">
+          <div class="label">Tujuan</div>
+          <div class="value">Terus Belajar dan Berkembang</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PENDIDIKAN -->
+  <section class="section" id="education">
+    <div class="container">
+      <div class="section-heading">
+        <div class="eyebrow">PERJALANAN BELAJAR</div>
+        <h2><span class="blue">Pendidikan</span> Saya</h2>
+        <p>Perjalanan pendidikan dan pengembangan diri.</p>
+      </div>
+
+      <div class="education-card">
+        <span class="education-date">Pendidikan saat ini</span>
+        <h3>📚 Pendidikan Saya</h3>
         <p>
-          Halo, saya Zafran. Saya tertarik mempelajari
-          teknologi, membuat aplikasi, dan merancang
-          tampilan website yang menarik.
-          Ini adalah website portofolio pribadi saya
-          yang dibuat menggunakan HTML dan CSS.
+          Saya terus belajar untuk menambah pengetahuan,
+          mengembangkan keterampilan, dan mempersiapkan
+          diri untuk masa depan.
         </p>
       </div>
     </div>
   </section>
 
-  <!-- SKILL -->
-  <section class="content-section" id="skills">
+  <!-- MINAT -->
+  <section class="section" id="interest">
     <div class="container">
       <div class="section-heading">
-        <div class="eyebrow">KEMAMPUAN</div>
-        <h2>Skill <span class="accent">Saya</span></h2>
-        <p>Hal-hal yang sedang saya pelajari.</p>
+        <div class="eyebrow">HAL YANG SAYA SUKAI</div>
+        <h2>Minat dan <span class="blue">Hobi</span></h2>
+        <p>Aktivitas yang membuat saya semangat belajar.</p>
       </div>
 
-      <div class="grid">
-        <article class="card">
-          <div class="icon-box">💻</div>
-          <h3>Web Development</h3>
-          <p>Belajar membangun halaman website yang rapi dan responsif.</p>
-          <div class="tag-list">
-            <span class="tag">HTML</span>
-            <span class="tag">CSS</span>
-          </div>
+      <div class="interest-grid">
+        <article class="interest-card">
+          <div class="interest-icon">💻</div>
+          <h3>Teknologi</h3>
+          <p>Mempelajari teknologi dan cara membuat website.</p>
         </article>
 
-        <article class="card">
-          <div class="icon-box">🎨</div>
-          <h3>UI Design</h3>
-          <p>Mempelajari warna, tata letak, dan pengalaman pengguna.</p>
-          <div class="tag-list">
-            <span class="tag">Desain</span>
-            <span class="tag">Kreativitas</span>
-          </div>
+        <article class="interest-card">
+          <div class="interest-icon">🎨</div>
+          <h3>Desain</h3>
+          <p>Menciptakan tampilan yang menarik dan mudah digunakan.</p>
         </article>
 
-        <article class="card">
-          <div class="icon-box">📱</div>
-          <h3>App Development</h3>
-          <p>Belajar membuat aplikasi dengan tampilan yang mudah digunakan.</p>
-          <div class="tag-list">
-            <span class="tag">FlutterFlow</span>
-            <span class="tag">Teknologi</span>
-          </div>
+        <article class="interest-card">
+          <div class="interest-icon">🚀</div>
+          <h3>Belajar Hal Baru</h3>
+          <p>Mengembangkan kemampuan dan mencoba ide kreatif.</p>
         </article>
-      </div>
-    </div>
-  </section>
-
-  <!-- HOBI -->
-  <section class="content-section" id="hobbies">
-    <div class="container">
-      <div class="section-heading">
-        <div class="eyebrow">WAKTU LUANG</div>
-        <h2>Hobi <span class="accent">Saya</span></h2>
-        <p>Aktivitas yang saya sukai.</p>
-      </div>
-
-      <div class="grid">
-        <article class="card">
-          <div class="icon-box">📚</div>
-          <h3>Belajar</h3>
-          <p>Mempelajari hal baru dan mengembangkan kemampuan.</p>
-        </article>
-
-        <article class="card">
-          <div class="icon-box">🎧</div>
-          <h3>Mendengarkan Musik</h3>
-          <p>Menikmati musik saat beristirahat atau beraktivitas.</p>
-        </article>
-
-        <article class="card">
-          <div class="icon-box">🚀</div>
-          <h3>Mencoba Teknologi</h3>
-          <p>Mencoba ide baru dan membuat proyek sederhana.</p>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <!-- KONTAK -->
-  <section class="content-section" id="contact">
-    <div class="container">
-      <div class="contact-box">
-        <h2>Mari <span class="accent">Terhubung!</span></h2>
-        <p>
-          Terima kasih sudah mengunjungi website saya.
-          Saya senang bisa berbagi karya dan pengalaman.
-        </p>
-
-        <a
-          class="btn btn-primary"
-          href="mailto:emailkamu@example.com">
-          ✉ Kirim Email
-        </a>
       </div>
     </div>
   </section>
@@ -497,7 +522,7 @@
   <!-- FOOTER -->
   <footer>
     <div class="container">
-      <p>© 2026 Zafran. Dibuat dengan HTML & CSS.</p>
+      <p>© 2026 Zafran | Tentang Saya</p>
     </div>
   </footer>
 
