@@ -6,245 +6,34 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Portofolio Saya</title>
 
-<style>
-  /* CSS lama kamu berada di sini */
-</style>
+  <style>
+    /* CSS kamu harus berada di sini */
+    body {
+      font-family: Arial, sans-serif;
+      background: #f8fafc;
+      color: #1e293b;
+      margin: 0;
+    }
 
+    header {
+      background: #2563eb;
+      color: white;
+      padding: 35px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
 
-/* 1. Pengaturan dasar */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+  <header>
+    <h1>Halo, Saya Zafran!</h1>
+    <p>Selamat datang di website saya.</p>
+  </header>
 
-html {
-  scroll-behavior: smooth;
-  scroll-padding-top: 80px;
-}
+  <main>
+    <h2>Tentang Saya</h2>
+    <p>Saya sedang belajar membuat website.</p>
+  </main>
 
-body {
-  font-family: Arial, Helvetica, sans-serif;
-  background: #f8fafc;
-  color: #1e293b;
-  line-height: 1.7;
-}
-
-a {
-  text-decoration: none;
-}
-
-/* 2. Menu navigasi */
-nav {
-  background: #ffffff;
-  padding: 18px 8%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 14px;
-  position: sticky;
-  top: 0;
-  z-index: 10;
-  box-shadow: 0 3px 15px #0f172a0d;
-}
-
-.logo {
-  font-size: 24px;
-  font-weight: bold;
-  color: #2563eb;
-}
-
-nav a {
-  color: #475569;
-  margin-left: 20px;
-  font-size: 14px;
-  font-weight: 600;
-  transition: color 0.2s;
-}
-
-nav a:hover {
-  color: #2563eb;
-}
-
-/* 3. Bagian pembuka */
-.hero {
-  padding: 90px 20px;
-  text-align: center;
-  background: linear-gradient(135deg, #dbeafe, #eff6ff, #ffffff);
-}
-
-.avatar {
-  width: 135px;
-  height: 135px;
-  border-radius: 50%;
-  background: linear-gradient(135deg, #2563eb, #60a5fa);
-  color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 52px;
-  font-weight: bold;
-  margin: 0 auto 24px;
-  border: 5px solid white;
-  box-shadow: 0 8px 25px #2563eb30;
-}
-
-.hero h1 {
-  font-size: clamp(30px, 5vw, 46px);
-  line-height: 1.25;
-  margin-bottom: 15px;
-}
-
-.hero h1 span {
-  color: #2563eb;
-}
-
-.hero p {
-  color: #64748b;
-  margin-bottom: 28px;
-}
-
-/* 4. Tombol */
-.button {
-  display: inline-block;
-  background: #2563eb;
-  color: #ffffff;
-  padding: 13px 26px;
-  border-radius: 10px;
-  font-weight: bold;
-  transition: 0.25s;
-  box-shadow: 0 5px 15px #2563eb25;
-}
-
-.button:hover {
-  background: #1d4ed8;
-  transform: translateY(-3px);
-}
-
-/* 5. Bagian konten */
-.container {
-  max-width: 1050px;
-  margin: 0 auto;
-  padding: 65px 24px;
-}
-
-.section-title {
-  text-align: center;
-  font-size: 30px;
-  margin-bottom: 32px;
-}
-
-.section-title span {
-  color: #2563eb;
-}
-
-/* 6. Kartu */
-.card {
-  background: #ffffff;
-  padding: 28px;
-  border: 1px solid #e2e8f0;
-  border-radius: 18px;
-  box-shadow: 0 8px 25px #0f172a08;
-  transition: transform 0.25s, box-shadow 0.25s;
-}
-
-.card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 12px 30px #0f172a12;
-}
-
-.card h3 {
-  color: #2563eb;
-  margin-bottom: 12px;
-}
-
-.card p {
-  color: #64748b;
-}
-
-/* 7. Susunan kartu skill */
-.grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 24px;
-}
-
-.skill {
-  display: inline-block;
-  background: #eff6ff;
-  color: #1d4ed8;
-  padding: 6px 12px;
-  margin: 10px 5px 0 0;
-  border-radius: 8px;
-  font-size: 13px;
-  font-weight: bold;
-}
-
-/* 8. Bagian kontak */
-.contact {
-  text-align: center;
-  background: linear-gradient(135deg, #dbeafe, #eff6ff);
-  border: 1px solid #bfdbfe;
-  padding: 45px 24px;
-  border-radius: 20px;
-}
-
-.contact p {
-  color: #475569;
-}
-
-/* 9. Footer */
-footer {
-  background: #0f172a;
-  color: #cbd5e1;
-  text-align: center;
-  padding: 28px 15px;
-  font-size: 14px;
-}
-
-/* 10. Tampilan HP dan tablet */
-@media (max-width: 768px) {
-  nav {
-    justify-content: center;
-    padding: 16px;
-  }
-
-  nav > div:last-child {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 12px;
-  }
-
-  nav a {
-    margin: 0;
-  }
-
-  .hero {
-    padding: 65px 18px;
-  }
-
-  .grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 16px;
-  }
-
-  .container {
-    padding: 45px 18px;
-  }
-}
-
-@media (max-width: 520px) {
-  .grid {
-    grid-template-columns: 1fr;
-  }
-
-  .section-title {
-    font-size: 26px;
-  }
-
-  .card {
-    padding: 22px;
-  }
-}
+</body>
+</html>
