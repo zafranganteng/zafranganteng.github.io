@@ -4,13 +4,281 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <title>Home | Zafran Portfolio</title>
+
     <link rel="stylesheet" href="style.css">
+
+    <style>
+        .hero {
+            min-height: 75vh;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 40px;
+        }
+
+        .hero-content {
+            max-width: 600px;
+        }
+
+        .hero-label {
+            display: inline-block;
+            padding: 10px 18px;
+            border: 1px solid #334155;
+            background: #111c30;
+            color: #60a5fa;
+            border-radius: 30px;
+            font-size: 14px;
+            margin-bottom: 25px;
+        }
+
+        .hero h1 {
+            font-size: clamp(38px, 6vw, 65px);
+            line-height: 1.15;
+            color: white;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 span {
+            color: #60a5fa;
+        }
+
+        .hero-content p {
+            color: #94a3b8;
+            font-size: 17px;
+            line-height: 1.9;
+            margin-bottom: 30px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 14px 24px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .btn-primary {
+            background: #2563eb;
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #1d4ed8;
+            transform: translateY(-3px);
+        }
+
+        .btn-outline {
+            border: 1px solid #334155;
+            color: white;
+        }
+
+        .btn-outline:hover {
+            border-color: #60a5fa;
+            color: #60a5fa;
+        }
+
+        .hero-visual {
+            width: 330px;
+            height: 330px;
+            flex-shrink: 0;
+            border-radius: 50%;
+            background: radial-gradient(circle, #1e40af, #111c30 70%);
+            border: 1px solid #334155;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            box-shadow: 0 0 80px #2563eb22;
+        }
+
+        .hero-visual svg {
+            width: 150px;
+            height: 150px;
+        }
+
+        .floating-logo {
+            position: absolute;
+            width: 65px;
+            height: 65px;
+            background: #111c30;
+            border: 1px solid #334155;
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 8px 25px #0005;
+        }
+
+        .floating-logo svg {
+            width: 35px;
+            height: 35px;
+        }
+
+        .logo-html {
+            top: 15px;
+            left: 15px;
+        }
+
+        .logo-css {
+            top: 20px;
+            right: 5px;
+        }
+
+        .logo-github {
+            bottom: 15px;
+            left: 35px;
+        }
+
+        .logo-flutter {
+            bottom: 25px;
+            right: 5px;
+        }
+
+        .home-section {
+            margin-top: 30px;
+        }
+
+        .section-title {
+            text-align: center;
+            color: white;
+            font-size: 30px;
+            margin-bottom: 30px;
+        }
+
+        .section-title span {
+            color: #60a5fa;
+        }
+
+        .home-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .home-card {
+            background: #111c30;
+            border: 1px solid #263449;
+            border-radius: 18px;
+            padding: 28px;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .home-card:hover {
+            transform: translateY(-7px);
+            border-color: #60a5fa;
+        }
+
+        .home-card .card-icon {
+            width: 55px;
+            height: 55px;
+            background: #1e3a5f;
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .home-card .card-icon svg {
+            width: 28px;
+            height: 28px;
+            stroke: #60a5fa;
+            fill: none;
+            stroke-width: 2;
+        }
+
+        .home-card h3 {
+            color: white;
+            margin-bottom: 12px;
+        }
+
+        .home-card p {
+            color: #94a3b8;
+            line-height: 1.7;
+            font-size: 14px;
+        }
+
+        .home-card .arrow {
+            display: inline-block;
+            color: #60a5fa;
+            margin-top: 20px;
+            font-weight: bold;
+        }
+
+        .home-socials {
+            display: flex;
+            justify-content: center;
+            gap: 18px;
+            margin: 35px 0;
+        }
+
+        .social-link {
+            width: 48px;
+            height: 48px;
+            background: #111c30;
+            border: 1px solid #263449;
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: 0.3s;
+        }
+
+        .social-link:hover {
+            transform: translateY(-4px);
+            border-color: #60a5fa;
+        }
+
+        .social-link svg {
+            width: 24px;
+            height: 24px;
+            fill: white;
+        }
+
+        @media (max-width: 850px) {
+            .hero {
+                flex-direction: column-reverse;
+                text-align: center;
+                padding-top: 40px;
+            }
+
+            .hero-buttons {
+                justify-content: center;
+            }
+
+            .hero-visual {
+                width: 250px;
+                height: 250px;
+            }
+
+            .hero-visual > svg {
+                width: 110px;
+                height: 110px;
+            }
+
+            .home-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
+
 <body>
 
 <header>
-    <div class="logo">MyWebsite</div>
+    <div class="logo">Z<span style="color:white">.</span>Portfolio</div>
+
     <nav>
         <a href="index.html">Home</a>
         <a href="biodata.html">Biodata</a>
@@ -19,17 +287,198 @@
     </nav>
 </header>
 
+<!-- HERO SECTION -->
 <div class="container">
-    <div class="card">
-        <h1>Selamat Datang!</h1>
-        <p>
-            Halo, selamat datang di website portofolio saya.
-            Website ini berisi informasi tentang diri saya,
-            keahlian, dan kontak.
-        </p>
+
+    <section class="hero">
+
+        <div class="hero-content">
+            <div class="hero-label">
+                ✨ Welcome to My Portfolio
+            </div>
+
+            <h1>
+                Halo, Saya<br>
+                <span>Zafran</span>
+            </h1>
+
+            <p>
+                Seorang pelajar yang tertarik pada dunia teknologi,
+                desain, dan pengembangan website. Saya senang
+                mempelajari hal baru dan menciptakan sesuatu
+                yang kreatif melalui teknologi.
+            </p>
+
+            <div class="hero-buttons">
+                <a href="biodata.html" class="btn btn-primary">
+                    About Me →
+                </a>
+
+                <a href="contact.html" class="btn btn-outline">
+                    Contact Me
+                </a>
+            </div>
+        </div>
+
+        <!-- LOGO TECHNOLOGY -->
+        <div class="hero-visual">
+
+            <!-- Main code icon -->
+            <svg viewBox="0 0 24 24"
+                 fill="none"
+                 stroke="#60a5fa"
+                 stroke-width="1.5"
+                 stroke-linecap="round"
+                 stroke-linejoin="round">
+                <path d="m8 8-4 4 4 4"/>
+                <path d="m16 8 4 4-4 4"/>
+                <path d="m14 4-4 16"/>
+            </svg>
+
+            <!-- HTML -->
+            <div class="floating-logo logo-html">
+                <svg viewBox="0 0 24 24">
+                    <path fill="#e34f26"
+                          d="M3 2h18l-1.6 18L12 22l-7.4-2z"/>
+                    <path fill="#f06529"
+                          d="M12 4h7l-1.3 15-5.7 1.6z"/>
+                    <path fill="white"
+                          d="M7 7h10l-.3 2H9l.3 2h7l-.7 6-3.6 1-3.6-1-.2-3h2l.2 1.5 1.6.4 1.6-.4.3-2.5H7.8z"/>
+                </svg>
+            </div>
+
+            <!-- CSS -->
+            <div class="floating-logo logo-css">
+                <svg viewBox="0 0 24 24">
+                    <path fill="#1572b6"
+                          d="M3 2h18l-1.6 18L12 22l-7.4-2z"/>
+                    <path fill="#33a9dc"
+                          d="M12 4h7l-1.3 15-5.7 1.6z"/>
+                    <path fill="white"
+                          d="M7 7h10l-.3 2H9l.3 2h7l-.7 6-3.6 1-3.6-1-.2-3h2l.2 1.5 1.6.4 1.6-.4.3-2.5H7.8z"/>
+                </svg>
+            </div>
+
+            <!-- GitHub -->
+            <div class="floating-logo logo-github">
+                <svg viewBox="0 0 24 24" fill="white">
+                    <path d="M12 .9a11.1 11.1 0 0 0-3.5 21.6c.6.1.8-.3.8-.6v-2.1c-3.3.7-4-1.4-4-1.4-.5-1.3-1.3-1.6-1.3-1.6-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1.1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.7-1.6-2.6-.3-5.3-1.3-5.3-5.8 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.2 1.2a11 11 0 0 1 5.8 0c2.2-1.5 3.2-1.2 3.2-1.2.6 1.6.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.5-2.7 5.5-5.3 5.8.4.3.8 1 .8 2v3c0 .3.2.7.8.6A11.1 11.1 0 0 0 12 .9z"/>
+                </svg>
+            </div>
+
+            <!-- Flutter -->
+            <div class="floating-logo logo-flutter">
+                <svg viewBox="0 0 24 24">
+                    <path fill="#42a5f5"
+                          d="M14.5 2 3 13.5l3.5 3.5L21 2z"/>
+                    <path fill="#42a5f5"
+                          d="m14.5 12-8 8L10 23l11-11z"/>
+                    <path fill="#01579b"
+                          d="m10 16 3.5-3.5L21 20h-7z"/>
+                </svg>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- QUICK LINKS -->
+    <section class="home-section">
+
+        <h2 class="section-title">
+            Explore <span>My Website</span>
+        </h2>
+
+        <div class="home-grid">
+
+            <a href="biodata.html" class="home-card">
+                <div class="card-icon">
+                    <svg viewBox="0 0 24 24">
+                        <circle cx="12" cy="8" r="4"/>
+                        <path d="M4 21v-2a8 8 0 0 1 16 0v2"/>
+                    </svg>
+                </div>
+                <h3>About Me</h3>
+                <p>
+                    Kenali saya lebih dekat melalui informasi
+                    dan biodata pribadi.
+                </p>
+                <span class="arrow">Explore →</span>
+            </a>
+
+            <a href="skill.html" class="home-card">
+                <div class="card-icon">
+                    <svg viewBox="0 0 24 24">
+                        <path d="m12 3 2.8 5.7L21 9.6l-4.5 4.4 1.1 6.2-5.6-3-5.6 3 1.1-6.2L3 9.6l6.2-.9z"/>
+                    </svg>
+                </div>
+                <h3>My Skills</h3>
+                <p>
+                    Lihat kemampuan dan teknologi yang
+                    sedang saya pelajari.
+                </p>
+                <span class="arrow">Explore →</span>
+            </a>
+
+            <a href="contact.html" class="home-card">
+                <div class="card-icon">
+                    <svg viewBox="0 0 24 24">
+                        <rect x="3" y="5" width="18" height="14" rx="2"/>
+                        <path d="m3 7 9 6 9-6"/>
+                    </svg>
+                </div>
+                <h3>Contact Me</h3>
+                <p>
+                    Hubungi saya melalui media sosial
+                    dan platform komunikasi.
+                </p>
+                <span class="arrow">Explore →</span>
+            </a>
+
+        </div>
+
+    </section>
+
+    <!-- SOCIAL MEDIA -->
+    <div class="home-socials">
+
+        <a href="https://github.com/username"
+           class="social-link"
+           aria-label="GitHub">
+            <svg viewBox="0 0 24 24">
+                <path d="M12 .9a11.1 11.1 0 0 0-3.5 21.6c.6.1.8-.3.8-.6v-2.1c-3.3.7-4-1.4-4-1.4-.5-1.3-1.3-1.6-1.3-1.6-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1.1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.7-1.6-2.6-.3-5.3-1.3-5.3-5.8 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.2 1.2a11 11 0 0 1 5.8 0c2.2-1.5 3.2-1.2 3.2-1.2.6 1.6.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.5-2.7 5.5-5.3 5.8.4.3.8 1 .8 2v3c0 .3.2.7.8.6A11.1 11.1 0 0 0 12 .9z"/>
+            </svg>
+        </a>
+
+        <a href="https://www.instagram.com/username/"
+           class="social-link"
+           aria-label="Instagram">
+            <svg viewBox="0 0 24 24"
+                 fill="none"
+                 stroke="white"
+                 stroke-width="2">
+                <rect x="3" y="3" width="18" height="18" rx="5"/>
+                <circle cx="12" cy="12" r="4"/>
+                <circle cx="17.5" cy="6.5" r="1"
+                        fill="white" stroke="none"/>
+            </svg>
+        </a>
+
+        <a href="https://www.tiktok.com/@username"
+           class="social-link"
+           aria-label="TikTok">
+            <svg viewBox="0 0 24 24" fill="white">
+                <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.48v13.67a2.9 2.9 0 0 1-2.9 2.9 2.9 2.9 0 0 1-2.9-2.9 2.9 2.9 0 0 1 2.9-2.9c.3 0 .6.05.88.14V9.36a6.4 6.4 0 0 0-.88-.06A6.38 6.38 0 0 0 3.06 15.68a6.38 6.38 0 0 0 6.38 6.38 6.38 6.38 0 0 0 6.38-6.38V8.73a8.27 8.27 0 0 0 4.83 1.55V6.8a4.84 4.84 0 0 1-1.06-.11z"/>
+            </svg>
+        </a>
+
     </div>
+
 </div>
+
+<footer>
+    © 2026 Zafran | Personal Website
+</footer>
 
 </body>
 </html>
-
