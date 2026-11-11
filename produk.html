@@ -4,69 +4,110 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Produk | ZAFRA FASHION</title>
+  <title>Our Products - Ryan FASHION</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header class="navbar">
-    <a href="index.html" class="logo">ZAFRA<span>.</span></a>
-    <nav>
-      <a href="index.html">Home</a>
-      <a class="active" href="produk.html">Produk</a>
-      <a href="tentang.html">Tentang</a>
-      <a href="kontak.html">Kontak</a>
-    </nav>
-    <a href="kontak.html" class="nav-button">Hubungi Kami</a>
-  </header>
 
-  <section class="section">
-    <p class="eyebrow">SHOP OUR COLLECTION</p>
-    <h1>Koleksi Produk Kami</h1>
-    <p>Pilih pakaian favoritmu dan temukan gaya terbaikmu.</p>
+<header class="navbar">
+  <a href="index.html" class="logo">Ryan<span>.</span></a>
+  <nav>
+    <a href="index.html">Home</a>
+    <a class="active" href="produk.html">Produk</a>
+    <a href="tentang.html">Tentang</a>
+    <a href="kontak.html">Kontak</a>
+  </nav>
+  <a href="kontak.html" class="nav-button">CONTACT ↗</a>
+</header>
 
-    <div class="products">
-      <div class="product-card">
-        <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=600" alt="T-shirt">
-        <h3>Basic T-Shirt</h3>
-        <p>Rp85.000</p>
-        <button class="btn cart-btn">Tambah ke Keranjang</button>
-      </div>
-      <div class="product-card">
-        <img src="https://images.unsplash.com/photo-1542272604-787c3835535d?w=600" alt="Jeans">
-        <h3>Classic Jeans</h3>
-        <p>Rp175.000</p>
-        <button class="btn cart-btn">Tambah ke Keranjang</button>
-      </div>
-      <div class="product-card">
-        <img src="https://images.unsplash.com/photo-1591047139829-d91aecb6caea?w=600" alt="Jacket">
-        <h3>Modern Jacket</h3>
-        <p>Rp220.000</p>
-        <button class="btn cart-btn">Tambah ke Keranjang</button>
-      </div>
-      <div class="product-card">
-        <img src="https://images.unsplash.com/photo-1434389677669-e08b4cac3105?w=600" alt="Sweater">
-        <h3>Casual Sweater</h3>
-        <p>Rp150.000</p>
-        <button class="btn cart-btn">Tambah ke Keranjang</button>
-      </div>
-      <div class="product-card">
-        <img src="https://images.unsplash.com/photo-1551488831-00ddcb6c6bd3?w=600" alt="Fashion">
-        <h3>Fashion Outfit</h3>
-        <p>Rp190.000</p>
-        <button class="btn cart-btn">Tambah ke Keranjang</button>
-      </div>
-      <div class="product-card">
-        <img src="https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?w=600" alt="Outfit">
-        <h3>Streetwear</h3>
-        <p>Rp200.000</p>
-        <button class="btn cart-btn">Tambah ke Keranjang</button>
-      </div>
+<section class="page-banner">
+  <span class="eyebrow">DISCOVER YOUR STYLE</span>
+  <h1>OUR PRODUCTS<span>.</span></h1>
+  <p>Temukan koleksi fashion favoritmu di sini.</p>
+</section>
+
+<section class="section">
+  <div class="shop-toolbar">
+    <input type="search" id="searchProduct" placeholder="Cari nama pakaian...">
+    <select id="categoryFilter">
+      <option value="all">Semua Kategori</option>
+      <option value="pria">Fashion Pria</option>
+      <option value="wanita">Fashion Wanita</option>
+      <option value="aksesoris">Aksesoris</option>
+    </select>
+  </div>
+
+  <div class="products shop-products">
+
+    <div class="product-card" data-category="pria">
+      <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=600" alt="Kaos Basic">
+      <div class="product-info"><span>MEN</span><h3>Basic T-Shirt</h3><p>Rp85.000</p><a class="btn" href="kontak.html">Pesan Sekarang</a></div>
     </div>
-  </section>
 
-  <footer>
-    <p>© 2026 ZAFRA FASHION. All Rights Reserved.</p>
-  </footer>
-  <script src="script.js"></script>
+    <div class="product-card" data-category="pria">
+      <img src="https://images.unsplash.com/photo-1591047139829-d91aecb6caea?w=600" alt="Jaket">
+      <div class="product-info"><span>MEN</span><h3>Premium Jacket</h3><p>Rp220.000</p><a class="btn" href="kontak.html">Pesan Sekarang</a></div>
+    </div>
+
+    <div class="product-card" data-category="pria">
+      <img src="https://images.unsplash.com/photo-1542272604-787c3835535d?w=600" alt="Jeans">
+      <div class="product-info"><span>MEN</span><h3>Classic Jeans</h3><p>Rp175.000</p><a class="btn" href="kontak.html">Pesan Sekarang</a></div>
+    </div>
+
+    <div class="product-card" data-category="wanita">
+      <img src="https://images.unsplash.com/photo-1434389677669-e08b4cac3105?w=600" alt="Sweater">
+      <div class="product-info"><span>WOMEN</span><h3>Casual Sweater</h3><p>Rp150.000</p><a class="btn" href="kontak.html">Pesan Sekarang</a></div>
+    </div>
+
+    <div class="product-card" data-category="wanita">
+      <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?w=600" alt="Outfit wanita">
+      <div class="product-info"><span>WOMEN</span><h3>Daily Outfit</h3><p>Rp190.000</p><a class="btn" href="kontak.html">Pesan Sekarang</a></div>
+    </div>
+
+    <div class="product-card" data-category="pria">
+      <img src="https://images.unsplash.com/photo-1551028719-00167b16eac5?w=600" alt="Leather Jacket">
+      <div class="product-info"><span>MEN</span><h3>Leather Jacket</h3><p>Rp280.000</p><a class="btn" href="kontak.html">Pesan Sekarang</a></div>
+    </div>
+
+    <div class="product-card" data-category="wanita">
+      <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=600" alt="Fashion wanita">
+      <div class="product-info"><span>WOMEN</span><h3>Elegant Fashion</h3><p>Rp210.000</p><a class="btn" href="kontak.html">Pesan Sekarang</a></div>
+    </div>
+
+    <div class="product-card" data-category="pria">
+      <img src="https://images.unsplash.com/photo-1618354691373-d851c5c3a990?w=600" alt="Hoodie">
+      <div class="product-info"><span>MEN</span><h3>Oversize Hoodie</h3><p>Rp165.000</p><a class="btn" href="kontak.html">Pesan Sekarang</a></div>
+    </div>
+
+    <div class="product-card" data-category="wanita">
+      <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=600" alt="Streetwear">
+      <div class="product-info"><span>WOMEN</span><h3>Streetwear Style</h3><p>Rp195.000</p><a class="btn" href="kontak.html">Pesan Sekarang</a></div>
+    </div>
+
+    <div class="product-card" data-category="pria">
+      <img src="https://images.unsplash.com/photo-1598033129183-c4f50c736f10?w=600" alt="Kemeja">
+      <div class="product-info"><span>MEN</span><h3>Casual Shirt</h3><p>Rp130.000</p><a class="btn" href="kontak.html">Pesan Sekarang</a></div>
+    </div>
+
+    <div class="product-card" data-category="wanita">
+      <img src="https://images.unsplash.com/photo-1551163943-3f6a855d1153?w=600" alt="Dress">
+      <div class="product-info"><span>WOMEN</span><h3>Modern Dress</h3><p>Rp230.000</p><a class="btn" href="kontak.html">Pesan Sekarang</a></div>
+    </div>
+
+    <div class="product-card" data-category="aksesoris">
+      <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=600" alt="Jam tangan">
+      <div class="product-info"><span>ACCESSORIES</span><h3>Classic Watch</h3><p>Rp250.000</p><a class="btn" href="kontak.html">Pesan Sekarang</a></div>
+    </div>
+
+  </div>
+  <p id="noProducts" class="empty-message" hidden>Produk tidak ditemukan.</p>
+</section>
+
+<footer>
+  <a href="index.html" class="logo footer-logo">ZAFRA<span>.</span></a>
+  <p>Fashion is not just clothes. It's your identity.</p>
+  <p class="copyright">© 2026 Ryan FASHION. All Rights Reserved.</p>
+</footer>
+<script src="script.js"></script>
 </body>
 </html>
