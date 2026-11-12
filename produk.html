@@ -4,189 +4,127 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Products | ZAFRA FASHION</title>
+  <title>Produk | ZAFRA FASHION</title>
+  <meta name="description" content="Temukan koleksi pakaian pria, wanita, dan aksesoris di ZAFRA FASHION.">
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
 <header class="navbar">
   <a href="index.html" class="logo">ZAFRA<span>.</span></a>
+
   <nav>
     <a href="index.html">Home</a>
-    <a class="active" href="produk.html">Produk</a>
+    <a href="produk.html" class="active">Produk</a>
     <a href="tentang.html">Tentang</a>
     <a href="kontak.html">Kontak</a>
   </nav>
-  <a href="kontak.html" class="nav-button">CONTACT ↗</a>
 </header>
 
+<!-- HEADER PRODUK -->
 <section class="page-banner">
-  <span class="eyebrow">ZAFRA FASHION COLLECTION</span>
-  <h1>OUR PRODUCTS<span>.</span></h1>
-  <p>Discover your style. Find your confidence.</p>
+  <p class="eyebrow">ZAFRA FASHION COLLECTION</p>
+  <h1>Discover Your Style.</h1>
+  <p>Koleksi fashion pilihan untuk melengkapi penampilanmu.</p>
 </section>
 
+<!-- KATEGORI -->
 <section class="section">
 
-  <div class="shop-toolbar">
-    <input type="search" id="searchProduct" placeholder="Cari nama pakaian...">
-
-   <select id="categoryFilter">
-  <option value="Semua">Semua Kategori</option>
-  <option value="Pria">Pakaian Pria</option>
-  <option value="Wanita">Pakaian Wanita</option>
-  <option value="Aksesoris">Aksesoris</option>
-</select>
-
-    <select id="sortPrice">
-      <option value="default">Urutkan Harga</option>
-      <option value="low">Termurah</option>
-      <option value="high">Termahal</option>
-    </select>
+  <div class="section-heading">
+    <p class="eyebrow">EXPLORE COLLECTION</p>
+    <h2>Belanja Berdasarkan Kategori</h2>
+    <p>Pilih kategori favoritmu.</p>
   </div>
 
-  <p class="product-count" id="productCount">Menampilkan 24 produk</p>
+  <div class="category-grid">
+    <a href="produk.html?category=Pria" class="category-card">
+      👔
+      <span>Fashion Pria</span>
+    </a>
 
-  <div class="products shop-products" id="productList">
+    <a href="produk.html?category=Wanita" class="category-card">
+      👗
+      <span>Fashion Wanita</span>
+    </a>
 
-    <!-- FASHION PRIA -->
-
-    <div class="product-card" data-category="pria" data-price="85000">
-      <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=600" alt="Basic T-Shirt">
-      <div class="product-info"><span>MEN COLLECTION</span><h3>Basic T-Shirt</h3><p>Rp85.000</p><a href="kontak.html" class="btn">PESAN SEKARANG</a></div>
-    </div>
-
-    <div class="product-card" data-category="pria" data-price="175000">
-      <img src="https://images.unsplash.com/photo-1542272604-787c3835535d?w=600" alt="Classic Jeans">
-      <div class="product-info"><span>MEN COLLECTION</span><h3>Classic Jeans</h3><p>Rp175.000</p><a href="kontak.html" class="btn">PESAN SEKARANG</a></div>
-    </div>
-
-    <div class="product-card" data-category="pria" data-price="220000">
-      <img src="https://images.unsplash.com/photo-1591047139829-d91aecb6caea?w=600" alt="Premium Jacket">
-      <div class="product-info"><span>MEN COLLECTION</span><h3>Premium Jacket</h3><p>Rp220.000</p><a href="kontak.html" class="btn">PESAN SEKARANG</a></div>
-    </div>
-
-    <div class="product-card" data-category="pria" data-price="165000">
-      <img src="https://images.unsplash.com/photo-1556821840-3a63f95609a7?w=600" alt="Hoodie">
-      <div class="product-info"><span>MEN COLLECTION</span><h3>Oversize Hoodie</h3><p>Rp165.000</p><a href="kontak.html" class="btn">PESAN SEKARANG</a></div>
-    </div>
-
-    <div class="product-card" data-category="pria" data-price="130000">
-      <img src="https://images.unsplash.com/photo-1598033129183-c4f50c736f10?w=600" alt="Casual Shirt">
-      <div class="product-info"><span>MEN COLLECTION</span><h3>Casual Shirt</h3><p>Rp130.000</p><a href="kontak.html" class="btn">PESAN SEKARANG</a></div>
-    </div>
-
-    <div class="product-card" data-category="pria" data-price="280000">
-      <img src="https://images.unsplash.com/photo-1551028719-00167b16eac5?w=600" alt="Leather Jacket">
-      <div class="product-info"><span>MEN COLLECTION</span><h3>Leather Jacket</h3><p>Rp280.000</p><a href="kontak.html" class="btn">PESAN SEKARANG</a></div>
-    </div>
-
-    <div class="product-card" data-category="pria" data-price="145000">
-      <img src="https://images.unsplash.com/photo-1618354691373-d851c5c3a990?w=600" alt="Streetwear">
-      <div class="product-info"><span>MEN COLLECTION</span><h3>Streetwear Tee</h3><p>Rp145.000</p><a href="kontak.html" class="btn">PESAN SEKARANG</a></div>
-    </div>
-
-    <div class="product-card" data-category="pria" data-price="195000">
-      <img src="https://images.unsplash.com/photo-1516826957135-700dedea698c?w=600" alt="Formal Outfit">
-      <div class="product-info"><span>MEN COLLECTION</span><h3>Formal Outfit</h3><p>Rp195.000</p><a href="kontak.html" class="btn">PESAN SEKARANG</a></div>
-    </div>
-
-    <!-- FASHION WANITA -->
-
-    <div class="product-card" data-category="wanita" data-price="150000">
-      <img src="https://images.unsplash.com/photo-1434389677669-e08b4cac3105?w=600" alt="Casual Sweater">
-      <div class="product-info"><span>WOMEN COLLECTION</span><h3>Casual Sweater</h3><p>Rp150.000</p><a href="kontak.html" class="btn">PESAN SEKARANG</a></div>
-    </div>
-
-    <div class="product-card" data-category="wanita" data-price="210000">
-      <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=600" alt="Elegant Outfit">
-      <div class="product-info"><span>WOMEN COLLECTION</span><h3>Elegant Outfit</h3><p>Rp210.000</p><a href="kontak.html" class="btn">PESAN SEKARANG</a></div>
-    </div>
-
-    <div class="product-card" data-category="wanita" data-price="230000">
-      <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=600" alt="Modern Dress">
-      <div class="product-info"><span>WOMEN COLLECTION</span><h3>Modern Dress</h3><p>Rp230.000</p><a href="kontak.html" class="btn">PESAN SEKARANG</a></div>
-    </div>
-
-    <div class="product-card" data-category="wanita" data-price="190000">
-      <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?w=600" alt="Daily Outfit">
-      <div class="product-info"><span>WOMEN COLLECTION</span><h3>Daily Outfit</h3><p>Rp190.000</p><a href="kontak.html" class="btn">PESAN SEKARANG</a></div>
-    </div>
-
-    <div class="product-card" data-category="wanita" data-price="175000">
-      <img src="https://images.unsplash.com/photo-1551163943-3f6a855d1153?w=600" alt="Fashion Top">
-      <div class="product-info"><span>WOMEN COLLECTION</span><h3>Fashion Top</h3><p>Rp175.000</p><a href="kontak.html" class="btn">PESAN SEKARANG</a></div>
-    </div>
-
-    <div class="product-card" data-category="wanita" data-price="200000">
-      <img src="https://images.unsplash.com/photo-1485230895905-ec40ba36b9bc?w=600" alt="Blouse">
-      <div class="product-info"><span>WOMEN COLLECTION</span><h3>Elegant Blouse</h3><p>Rp200.000</p><a href="kontak.html" class="btn">PESAN SEKARANG</a></div>
-    </div>
-
-    <div class="product-card" data-category="wanita" data-price="185000">
-      <img src="https://images.unsplash.com/photo-1548624149-fd2a2c3edb1e?w=600" alt="Cardigan">
-      <div class="product-info"><span>WOMEN COLLECTION</span><h3>Soft Cardigan</h3><p>Rp185.000</p><a href="kontak.html" class="btn">PESAN SEKARANG</a></div>
-    </div>
-
-    <div class="product-card" data-category="wanita" data-price="245000">
-      <img src="https://images.unsplash.com/photo-1496747611176-843222e1e57c?w=600" alt="Summer Dress">
-      <div class="product-info"><span>WOMEN COLLECTION</span><h3>Summer Dress</h3><p>Rp245.000</p><a href="kontak.html" class="btn">PESAN SEKARANG</a></div>
-    </div>
-
-    <!-- AKSESORIS -->
-
-    <div class="product-card" data-category="aksesoris" data-price="250000">
-      <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=600" alt="Classic Watch">
-      <div class="product-info"><span>ACCESSORIES</span><h3>Classic Watch</h3><p>Rp250.000</p><a href="kontak.html" class="btn">PESAN SEKARANG</a></div>
-    </div>
-
-    <div class="product-card" data-category="aksesoris" data-price="120000">
-      <img src="https://images.unsplash.com/photo-1548036328-c9fa89d128fa?w=600" alt="Handbag">
-      <div class="product-info"><span>ACCESSORIES</span><h3>Elegant Handbag</h3><p>Rp120.000</p><a href="kontak.html" class="btn">PESAN SEKARANG</a></div>
-    </div>
-
-    <div class="product-card" data-category="aksesoris" data-price="95000">
-      <img src="https://images.unsplash.com/photo-1508296695146-257a814070b4?w=600" alt="Sunglasses">
-      <div class="product-info"><span>ACCESSORIES</span><h3>Classic Sunglasses</h3><p>Rp95.000</p><a href="kontak.html" class="btn">PESAN SEKARANG</a></div>
-    </div>
-
-    <div class="product-card" data-category="aksesoris" data-price="110000">
-      <img src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?w=600" alt="Fashion Bag">
-      <div class="product-info"><span>ACCESSORIES</span><h3>Fashion Bag</h3><p>Rp110.000</p><a href="kontak.html" class="btn">PESAN SEKARANG</a></div>
-    </div>
-
-    <div class="product-card" data-category="aksesoris" data-price="75000">
-      <img src="https://images.unsplash.com/photo-1622560480654-d96214fdc887?w=600" alt="Backpack">
-      <div class="product-info"><span>ACCESSORIES</span><h3>Casual Backpack</h3><p>Rp75.000</p><a href="kontak.html" class="btn">PESAN SEKARANG</a></div>
-    </div>
-
-    <div class="product-card" data-category="aksesoris" data-price="85000">
-      <img src="https://images.unsplash.com/photo-1524805444758-089113d48a6d?w=600" alt="Watch">
-      <div class="product-info"><span>ACCESSORIES</span><h3>Minimalist Watch</h3><p>Rp85.000</p><a href="kontak.html" class="btn">PESAN SEKARANG</a></div>
-    </div>
-
-    <div class="product-card" data-category="aksesoris" data-price="65000">
-      <img src="https://images.unsplash.com/photo-1576566588028-4147f3842f27?w=600" alt="Cap">
-      <div class="product-info"><span>ACCESSORIES</span><h3>Casual Cap</h3><p>Rp65.000</p><a href="kontak.html" class="btn">PESAN SEKARANG</a></div>
-    </div>
-
-    <div class="product-card" data-category="aksesoris" data-price="90000">
-      <img src="https://images.unsplash.com/photo-1612902456551-333ac5afa26e?w=600" alt="Fashion Accessories">
-      <div class="product-info"><span>ACCESSORIES</span><h3>Fashion Accessory</h3><p>Rp90.000</p><a href="kontak.html" class="btn">PESAN SEKARANG</a></div>
-    </div>
-
+    <a href="produk.html?category=Aksesoris" class="category-card">
+      ✨
+      <span>Aksesoris</span>
+    </a>
   </div>
-
-  <p id="noProducts" class="empty-message" hidden>Maaf, produk tidak ditemukan.</p>
 
 </section>
 
+<!-- DAFTAR PRODUK -->
+<section class="section product-section">
+
+  <div class="section-heading">
+    <p class="eyebrow">OUR PRODUCTS</p>
+    <h2>Semua Koleksi Produk</h2>
+    <p>Temukan produk fashion sesuai gaya dan kebutuhanmu.</p>
+  </div>
+
+  <!-- PENCARIAN DAN FILTER -->
+  <div class="filter-area">
+
+    <input
+      type="search"
+      id="searchProduct"
+      placeholder="Cari nama produk..."
+      aria-label="Cari produk"
+    >
+
+    <select id="categoryFilter" aria-label="Pilih kategori">
+      <option value="Semua">Semua Kategori</option>
+      <option value="Pria">Pakaian Pria</option>
+      <option value="Wanita">Pakaian Wanita</option>
+      <option value="Aksesoris">Aksesoris</option>
+    </select>
+
+    <select id="sortPrice" aria-label="Urutkan harga">
+      <option value="default">Urutkan Harga</option>
+      <option value="low">Harga Termurah</option>
+      <option value="high">Harga Termahal</option>
+    </select>
+
+  </div>
+
+  <!-- JUMLAH PRODUK -->
+  <div class="product-total" id="productCount">
+    Memuat produk...
+  </div>
+
+  <!-- PRODUK DARI SCRIPT.JS -->
+  <div class="product-grid" id="productList"></div>
+
+  <!-- JIKA PRODUK TIDAK DITEMUKAN -->
+  <p class="empty-message" id="noProducts" hidden>
+    Maaf, produk yang kamu cari tidak ditemukan.
+  </p>
+
+</section>
+
+<!-- PROMO -->
+<section class="promo">
+  <div>
+    <p class="eyebrow">YOUR STYLE, YOUR STORY</p>
+    <h2>Tampil percaya diri dengan gaya terbaikmu.</h2>
+    <p>Temukan koleksi fashion pilihan hanya di ZAFRA FASHION.</p>
+    <a href="kontak.html" class="btn btn-light">
+      Hubungi Kami
+    </a>
+  </div>
+</section>
+
+<!-- FOOTER -->
 <footer>
-  <a href="index.html" class="logo footer-logo">ZAFRA<span>.</span></a>
-  <p>Fashion is not just clothes. It's your identity.</p>
-  <p class="copyright">© 2026 ZAFRA FASHION. All Rights Reserved.</p>
+  <p>© 2026 ZAFRA FASHION. All Rights Reserved.</p>
+  <p>Fashion is the expression of your personality.</p>
 </footer>
 
 <script src="script.js"></script>
+
 </body>
 </html>
