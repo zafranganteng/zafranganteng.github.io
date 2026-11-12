@@ -1,0 +1,66 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Produk | RYAN FASHION</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+<header>
+  <a href="index.html" class="logo">RYAN<span>FASHION.</span></a>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="produk.html">Produk</a>
+    <a href="tentang.html">Tentang</a>
+    <a href="kontak.html">Kontak</a>
+  </nav>
+  <a href="#keranjang" class="cart">
+    <i class="fa-solid fa-bag-shopping"></i>
+    <span id="cartCount">0</span>
+  </a>
+</header>
+
+<section class="page-heading">
+  <p>DISCOVER YOUR STYLE</p>
+  <h1>Koleksi Fashion</h1>
+  <p>Pilih gaya terbaikmu bersama RYAN FASHION.</p>
+</section>
+
+<section class="section">
+  <div class="search-box">
+    <input type="text" id="searchInput" placeholder="Cari nama produk...">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </div>
+
+  <div class="filters">
+    <button class="filter active" data-category="Semua">Semua</button>
+    <button class="filter" data-category="Kaos">Kaos</button>
+    <button class="filter" data-category="Kemeja">Kemeja</button>
+    <button class="filter" data-category="Hoodie">Hoodie</button>
+    <button class="filter" data-category="Celana">Celana</button>
+    <button class="filter" data-category="Jaket">Jaket</button>
+  </div>
+
+  <div class="product-grid" id="productGrid"></div>
+  <p id="emptyMessage" class="center"></p>
+
+  <div id="keranjang" class="cart-panel">
+    <h2><i class="fa-solid fa-bag-shopping"></i> Keranjang Belanja</h2>
+    <div id="cartItems"></div>
+    <h3 id="cartTotal">Total: Rp0</h3>
+    <button class="btn" onclick="checkout()">CHECKOUT VIA WHATSAPP</button>
+  </div>
+</section>
+
+<footer>
+  <h2>RYAN FASHION.</h2>
+  <p>© 2026 RYAN FASHION. All Rights Reserved.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
