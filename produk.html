@@ -4,66 +4,53 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Our Collection | RYAN FASHION</title>
+  <title>Produk | RYAN FASHION</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <header class="navbar">
-  <a class="logo" href="index.html">RYAN<span>FASHION.</span></a>
+  <a href="index.html" class="logo">RYAN<span>.</span></a>
+
   <nav>
     <a href="index.html">Home</a>
-    <a class="active" href="produk.html">Produk</a>
+    <a href="produk.html" class="active">Produk</a>
     <a href="tentang.html">Tentang</a>
     <a href="kontak.html">Kontak</a>
   </nav>
+
+  <a href="kontak.html" class="nav-button">Hubungi Kami</a>
 </header>
 
 <section class="product-hero">
-  <div>
-    <span class="eyebrow">RYAN FASHION / SHOP</span>
-    <h1>Find Your<br><em>Signature Style.</em></h1>
-    <p>100 pilihan fashion untuk melengkapi setiap cerita dan penampilanmu.</p>
-  </div>
-  <div class="product-hero-number">
-    <strong>100</strong>
-    <span>CURATED<br>PRODUCTS</span>
-  </div>
+  <p class="eyebrow">RYAN FASHION COLLECTION</p>
+  <h1>Discover Your <span>Style.</span></h1>
+  <p>
+    Koleksi fashion pilihan untuk melengkapi penampilan
+    dan menunjukkan karakter gayamu.
+  </p>
 </section>
 
-<section class="section shop-section">
+<section class="products-section">
 
-  <div class="shop-heading">
+  <div class="product-heading">
     <div>
-      <span class="eyebrow">THE COLLECTION</span>
-      <h2>Explore All Products</h2>
-      <p>Pilih koleksi favoritmu dari berbagai kategori.</p>
+      <p class="eyebrow">OUR PRODUCTS</p>
+      <h2>Explore Collection</h2>
+      <p class="product-total">Menampilkan <span id="productCount">100</span> produk pilihan</p>
     </div>
-    <div class="shop-count-label">RYAN / 2026</div>
   </div>
 
-  <div class="shop-categories">
-    <a href="produk.html?category=Pria" class="shop-category">
-      <span>01</span> MEN <b>↗</b>
-    </a>
-    <a href="produk.html?category=Wanita" class="shop-category">
-      <span>02</span> WOMEN <b>↗</b>
-    </a>
-    <a href="produk.html?category=Aksesoris" class="shop-category">
-      <span>03</span> ACCESSORIES <b>↗</b>
-    </a>
-  </div>
-
-  <div class="shop-toolbar">
+  <div class="product-tools">
     <div class="search-box">
       <span>⌕</span>
-      <input type="search" id="searchProduct" placeholder="Cari produk favoritmu...">
+      <input type="search" id="searchProduct" placeholder="Cari nama produk...">
     </div>
 
     <select id="categoryFilter">
       <option value="Semua">Semua Kategori</option>
-      <option value="Pria">Pakaian Pria</option>
-      <option value="Wanita">Pakaian Wanita</option>
+      <option value="Pria">Fashion Pria</option>
+      <option value="Wanita">Fashion Wanita</option>
       <option value="Aksesoris">Aksesoris</option>
     </select>
 
@@ -71,35 +58,31 @@
       <option value="default">Urutkan Produk</option>
       <option value="low">Harga Terendah</option>
       <option value="high">Harga Tertinggi</option>
-      <option value="name">Nama A - Z</option>
+      <option value="az">Nama A - Z</option>
     </select>
   </div>
 
-  <div class="results-line">
-    <p id="productCount">Memuat koleksi...</p>
-    <span>100 ITEMS / RYAN COLLECTION</span>
+  <div class="category-pills">
+    <a href="produk.html" class="category-pill">Semua Produk</a>
+    <a href="produk.html?category=Pria" class="category-pill">Pria</a>
+    <a href="produk.html?category=Wanita" class="category-pill">Wanita</a>
+    <a href="produk.html?category=Aksesoris" class="category-pill">Aksesoris</a>
   </div>
 
-  <div class="product-grid" id="productList"></div>
+  <div class="product-grid" id="productList">
+    <!-- Produk akan ditampilkan otomatis dari script.js -->
+  </div>
 
-  <div class="empty-state" id="noProducts" hidden>
-    <span>✦</span>
+  <div id="noProducts" class="no-products" hidden>
     <h3>Produk tidak ditemukan</h3>
     <p>Coba kata pencarian atau kategori lainnya.</p>
   </div>
 
 </section>
 
-<section class="shop-bottom">
-  <span class="eyebrow">MAKE IT YOURS</span>
-  <h2>Your style, your rules.</h2>
-  <a href="kontak.html" class="btn btn-light">Hubungi Ryan Fashion ↗</a>
-</section>
-
 <footer>
-  <a class="logo footer-logo" href="index.html">RYAN<span>FASHION.</span></a>
-  <p>Style is personal. Make it yours.</p>
-  <small>© 2026 RYAN FASHION. All Rights Reserved.</small>
+  <h2>RYAN<span>.</span></h2>
+  <p>© 2026 Ryan Fashion. All Rights Reserved.</p>
 </footer>
 
 <script src="script.js"></script>
